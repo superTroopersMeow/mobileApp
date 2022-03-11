@@ -5,7 +5,7 @@ import { StyleSheet, Text,TouchableOpacity, Image, SafeAreaView, Alert, Button }
 export default function App() {
 
 return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, containerStyle]}>
       <Text> Hello React Native World </Text>
       <TouchableOpacity onPress={() => console.log("Image Tapped")}>
       <Image source={{
@@ -24,11 +24,12 @@ return (
     </SafeAreaView>
   );
 }
+const containerStyle ={backgroundColor: "pink"};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'pink',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
