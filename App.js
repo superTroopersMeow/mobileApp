@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text,TouchableOpacity, Image, SafeAreaView, Button } from 'react-native';
+import { StyleSheet, Text,TouchableOpacity, Image, SafeAreaView, Alert, Button } from 'react-native';
 
 
 export default function App() {
@@ -14,7 +14,11 @@ return (
         uri:"https://picsum.photos/200/300"}}/>
 
       </TouchableOpacity>
-      <Button title="Learn More" onPress={() => console.log("Button Tapped")}/>
+      <Button title="Learn More" 
+      onPress={() =>
+        Alert.prompt("My Title","My Message", text => console.log(text))
+       }
+       />
 
       <StatusBar style="auto" />
     </SafeAreaView>
